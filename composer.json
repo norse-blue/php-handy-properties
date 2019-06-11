@@ -1,0 +1,64 @@
+{
+  "name": "norse-blue/handy-properties",
+  "description": "PHP Handy Properties is a PHP library that scaffolds the use of properties through accessors and mutators.",
+  "keywords": ["handy", "properties", "accessors", "mutators"],
+  "homepage": "https://norse.blue/open-source/php-handy-properties",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/norse-blue/php-handy-properties/issues",
+    "source": "https://github.com/norse-blue/php-handy-properties"
+  },
+  "authors": [
+    {
+      "name": "Axel Pardemann",
+      "email": "axel.pardemann@norse.blue"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "require": {
+    "php": "^7.3"
+  },
+  "require-dev": {
+    "nunomaduro/phpinsights": "^1.6",
+    "phpstan/phpstan": "^0.11.8",
+    "phpunit/phpunit": "^8.2",
+    "squizlabs/php_codesniffer": "^3.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "NorseBlue\\HandyProperties\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "NorseBlue\\HandyProperties\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "analyse": "vendor/bin/phpstan analyse --ansi",
+    "check": [
+      "@style:check",
+      "@analyse",
+      "@insights",
+      "@test"
+    ],
+    "check:coverage": [
+      "@style:check",
+      "@analyse",
+      "@insights",
+      "@test:coverage"
+    ],
+    "insights": "vendor/bin/phpinsights --no-interaction --ansi",
+    "insights:verbose": "vendor/bin/phpinsights --no-interaction --ansi --verbose",
+    "style:check": "vendor/bin/phpcs",
+    "style:fix": "vendor/bin/phpcbf",
+    "test": "vendor/bin/phpunit --colors=always",
+    "test:coverage": "vendor/bin/phpunit --colors=always --coverage-clover=./build/coverage.xml --coverage-html=./build/coverage"
+  }
+}
