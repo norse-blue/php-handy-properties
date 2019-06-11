@@ -2,7 +2,7 @@
     <h1>PHP Handy Properties</h1>
     <p align="center"> 
         <a href="https://packagist.org/packages/norse-blue/handy-properties"><img alt="Stable Release" src="https://img.shields.io/packagist/v/norse-blue/handy-properties.svg?color=%235e81ac&style=popout-square"></a>
-        <a href="https://circleci.com/gh/norse-blue/php-handy-properties/tree/master"><img alt="Build Status" src="https://img.shields.io/circleci/project/github/norse-blue/php-handy-properties/master.svg?color=%23a3be8c&style=popout-square"></a>
+        <a href="https://travis-ci.com/norse-blue/php-handy-properties"><img alt="Build Status" src="https://img.shields.io/travis/com/norse-blue/php-handy-properties.svg?color=%23a3be8c&style=popout-square"></a>
         <a href="https://php.net/releases"><img alt="PHP Version" src="https://img.shields.io/packagist/php-v/norse-blue/handy-properties.svg?color=%23b48ead&style=popout-square"></a>
         <a href="https://codeclimate.com/github/norse-blue/php-handy-properties/maintainability"><img src="https://api.codeclimate.com/v1/badges/866ae253f0514d705924/maintainability" /></a>
         <a href="https://codeclimate.com/github/norse-blue/php-handy-properties/test_coverage"><img src="https://api.codeclimate.com/v1/badges/866ae253f0514d705924/test_coverage" /></a>
