@@ -38,14 +38,12 @@ trait HasPropertyMutators
      * @param string $key
      * @param mixed $value
      *
-     * @return self
+     * @return mixed
      */
-    public function __set(string $key, $value): self
+    public function __set(string $key, $value)
     {
         if ($this->hasMutator($key, $mutator)) {
-            $this->$mutator($value);
-
-            return $this;
+            return $this->$mutator($value);
         }
 
         throw new PropertyNotMutableException($key, 'The property is not mutable.');
