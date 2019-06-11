@@ -1,0 +1,20 @@
+<?php
+
+declare(strict_types=1);
+
+namespace NorseBlue\HandyProperties\Support;
+
+final class Transformer
+{
+    /**
+     * Transform the given string into studly caps.
+     *
+     * @param string $value
+     *
+     * @return string
+     */
+    public static function studly(string $value): string
+    {
+        return str_replace(' ', '', ucwords(str_replace(['-', '_'], ' ', $value)));
+    }
+}
