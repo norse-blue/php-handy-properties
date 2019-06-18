@@ -7,7 +7,7 @@ namespace NorseBlue\HandyProperties\Tests\Helpers;
 use NorseBlue\HandyProperties\HandyObject;
 
 /**
- * @property int $value
+ * @property-write int $value
  */
 class HandySubjectMutableVoid extends HandyObject
 {

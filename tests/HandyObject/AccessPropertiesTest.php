@@ -14,11 +14,40 @@ use NorseBlue\HandyProperties\Tests\TestCase;
 class AccessPropertiesTest extends TestCase
 {
     /** @test */
+    public function properties_can_be_accessed_when_property_is_accessible_with_default_value()
+    {
+        $subject = new HandySubjectAccessible();
+
+        $this->assertEquals(0, $subject->value);
+        $this->assertEquals(false, $subject->odd);
+    }
+
+    /** @test */
     public function properties_can_be_accessed_when_property_is_accessible()
     {
         $subject = new HandySubjectAccessible(3);
 
         $this->assertEquals(3, $subject->value);
+        $this->assertEquals(true, $subject->odd);
+    }
+
+    /** @test */
+    public function properties_can_be_accessed_when_property_accessor_exist()
+    {
+        $object = new HandySubjectAccessible();
+
+        $subject_1 = $object->random_int;
+        $subject_2 = $object->random_int;
+
+        $this->assertIsInt($subject_1);
+        $this->assertGreaterThanOrEqual(0, $subject_1);
+        $this->assertLessThanOrEqual(9, $subject_1);
+
+        $this->assertIsInt($subject_2);
+        $this->assertGreaterThanOrEqual(0, $subject_2);
+        $this->assertLessThanOrEqual(9, $subject_2);
+
+        $this->assertNotEquals($subject_1, $subject_2);
     }
 
     /** @test */
