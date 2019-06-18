@@ -25,6 +25,10 @@ trait HasPropertyAccessors
         $studly_key = Transformer::studly($key);
         $accessor = 'get' . $studly_key . 'Property';
 
+        if (!method_exists($this, $accessor)) {
+            $accessor = 'is' . $studly_key . 'Property';
+        }
+
         return method_exists($this, $accessor);
     }
 
