@@ -23,11 +23,7 @@ trait HasPropertyMutators
     protected function hasMutator(string $key, ?string &$mutator = null): bool
     {
         $studly_key = Transformer::studly($key);
-        $mutator = 'set' . $studly_key . 'Property';
-
-        if (!method_exists($this, $mutator)) {
-            $mutator = 'change' . $studly_key . 'Property';
-        }
+        $mutator = 'mutator' . $studly_key;
 
         return method_exists($this, $mutator);
     }

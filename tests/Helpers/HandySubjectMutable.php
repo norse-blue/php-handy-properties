@@ -16,7 +16,7 @@ class HandySubjectMutable extends HandyObject
 
     public function __construct(int $value = 0)
     {
-        $this->setValueProperty($value);
+        $this->mutatorValue($value);
     }
 
     /**
@@ -24,7 +24,7 @@ class HandySubjectMutable extends HandyObject
      *
      * @return self
      */
-    protected function setValueProperty(int $value): self
+    protected function mutatorValue(int $value): self
     {
         $this->value = $value;
 

@@ -16,13 +16,13 @@ class HandySubjectMutableVoid extends HandyObject
 
     public function __construct(int $value = 0)
     {
-        $this->setValueProperty($value);
+        $this->mutatorValue($value);
     }
 
     /**
      * @param int $value
      */
-    protected function setValueProperty(int $value)
+    protected function mutatorValue(int $value)
     {
         $this->value = $value;
     }

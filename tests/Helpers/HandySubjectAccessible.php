@@ -28,7 +28,7 @@ class HandySubjectAccessible extends HandyObject
     /**
      * @return int
      */
-    protected function getValueProperty(): int
+    protected function accessorValue(): int
     {
         return $this->value;
     }
@@ -36,7 +36,7 @@ class HandySubjectAccessible extends HandyObject
     /**
      * @return bool
      */
-    protected function isOddProperty(): bool
+    protected function accessorOdd(): bool
     {
         return $this->value % 2 !== 0;
     }
@@ -46,7 +46,7 @@ class HandySubjectAccessible extends HandyObject
      *
      * @throws Exception
      */
-    protected function getRandomIntProperty(): int
+    protected function accessorRandomInt(): int
     {
         do {
             $new_random = random_int(0, 9);

@@ -23,11 +23,7 @@ trait HasPropertyAccessors
     protected function hasAccessor(string $key, ?string &$accessor = null): bool
     {
         $studly_key = Transformer::studly($key);
-        $accessor = 'get' . $studly_key . 'Property';
-
-        if (!method_exists($this, $accessor)) {
-            $accessor = 'is' . $studly_key . 'Property';
-        }
+        $accessor = 'accessor' . $studly_key;
 
         return method_exists($this, $accessor);
     }

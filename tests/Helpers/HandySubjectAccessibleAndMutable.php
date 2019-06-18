@@ -16,13 +16,13 @@ class HandySubjectAccessibleAndMutable extends HandyObject
 
     public function __construct(int $value = 0)
     {
-        $this->setValueProperty($value);
+        $this->mutatorValue($value);
     }
 
     /**
      * @return int
      */
-    protected function getValueProperty()
+    protected function accessorValue()
     {
         return $this->value;
     }
@@ -32,7 +32,7 @@ class HandySubjectAccessibleAndMutable extends HandyObject
      *
      * @return self
      */
-    protected function setValueProperty(int $value): self
+    protected function mutatorValue(int $value): self
     {
         $this->value = $value;
 
