@@ -23,9 +23,7 @@ trait HasPropertyMutators
      */
     final protected function hasMutator(string $key, ?string &$mutator = null): bool
     {
-        $mutator = $this->buildMethodName($key, 'mutator');
-
-        return method_exists($this, $mutator);
+        return method_exists($this, $$this->buildMethodName($key, 'mutator', $mutator));
     }
 
     /**

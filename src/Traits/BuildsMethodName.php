@@ -9,16 +9,19 @@ use NorseBlue\HandyProperties\Support\Transformer;
 trait BuildsMethodName
 {
     /**
-     * Resolve
+     * Builds the method name.
+     *
      * @param string $key
      * @param string $type
+     * @param string|null $name
      *
      * @return string
      */
-    final protected function buildMethodName(string $key, string $type): string
+    final protected function buildMethodName(string $key, string $type, ?string &$name): string
     {
         $studly_key = Transformer::studly($key);
+        $name = strtolower($type) . $studly_key;
 
-        return strtolower($type) . $studly_key;
+        return $name;
     }
 }
