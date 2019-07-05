@@ -54,6 +54,7 @@ exclude_patterns:
   - "docs/.sass-cache/**/*"
   - "docs/_site/**/*"
   - "docs/assets/**/*"
+  - "tests/**/*"
   - "vendor/**/*"
   # Files
   - "**/.phpunit.result.cache"
