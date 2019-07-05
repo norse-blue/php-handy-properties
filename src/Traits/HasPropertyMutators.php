@@ -5,13 +5,14 @@ declare(strict_types=1);
 namespace NorseBlue\HandyProperties\Traits;
 
 use NorseBlue\HandyProperties\Exceptions\PropertyNotMutableException;
-use NorseBlue\HandyProperties\Support\Transformer;
 
 /**
  * Handles property mutators.
  */
 trait HasPropertyMutators
 {
+    use BuildsMethodName;
+
     /**
      * Checks if a mutator exists for the key.
      *
@@ -20,10 +21,9 @@ trait HasPropertyMutators
      *
      * @return bool
      */
-    protected function hasMutator(string $key, ?string &$mutator = null): bool
+    final protected function hasMutator(string $key, ?string &$mutator = null): bool
     {
-        $studly_key = Transformer::studly($key);
-        $mutator = 'mutator' . $studly_key;
+        $mutator = $this->buildMethodName($key, 'mutator');
 
         return method_exists($this, $mutator);
     }

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace NorseBlue\HandyProperties\Traits;
 
 use NorseBlue\HandyProperties\Exceptions\PropertyNotAccessibleException;
-use NorseBlue\HandyProperties\Support\Transformer;
 
 /**
  * Handles property accessors.
@@ -20,10 +19,9 @@ trait HasPropertyAccessors
      *
      * @return bool
      */
-    protected function hasAccessor(string $key, ?string &$accessor = null): bool
+    final protected function hasAccessor(string $key, ?string &$accessor = null): bool
     {
-        $studly_key = Transformer::studly($key);
-        $accessor = 'accessor' . $studly_key;
+        $accessor = $this->buildMethodName($key, 'accessor');
 
         return method_exists($this, $accessor);
     }
