@@ -11,6 +11,8 @@ use NorseBlue\HandyProperties\Exceptions\PropertyNotAccessibleException;
  */
 trait HasPropertyAccessors
 {
+    use BuildsMethodName;
+
     /**
      * Checks if an accessor exists for the key.
      *
