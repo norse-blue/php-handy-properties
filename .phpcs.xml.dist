@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="PSR2-Custom">
-    <description>PSR2 based ruleset</description>
+<ruleset name="PSR12-Custom">
+    <description>PSR12 based custom ruleset</description>
 
     <!-- Config -->
     <config name="ignore_errors_on_exit" value ="1" />
@@ -14,7 +14,7 @@
     <arg value="sp" />
 
     <!-- Base ruleset -->
-    <rule ref="PSR2" />
+    <rule ref="PSR12" />
     <rule ref="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">
         <exclude-pattern>./tests/*</exclude-pattern>
     </rule>
