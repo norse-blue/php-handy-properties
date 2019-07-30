@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace NorseBlue\HandyProperties\Traits;
 
-use NorseBlue\HandyProperties\Support\Transformer;
+use NorseBlue\HandyProperties\Support\StringTransformer;
 
 trait BuildsMethodName
 {
@@ -19,7 +19,7 @@ trait BuildsMethodName
      */
     final protected function buildMethodName(string $key, string $type, ?string &$name): string
     {
-        $studly_key = Transformer::studly($key);
+        $studly_key = StringTransformer::studly($key);
         $name = strtolower($type) . $studly_key;
 
         return $name;

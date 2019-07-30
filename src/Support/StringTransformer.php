@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace NorseBlue\HandyProperties\Support;
 
-final class Transformer
+final class StringTransformer
 {
     /**
      * Transform the given string into studly caps.
