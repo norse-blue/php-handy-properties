@@ -1,4 +1,19 @@
+remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-remote-theme
-remote_theme: pmarsceill/just-the-docs
+  - jekyll-seo-tag
+
+title: PHP Handy Properties
+description: PHP Handy Properties is a PHP library that scaffolds the use of properties through accessors and mutators.
+url: "https://norse-blue.github.io"
+baseurl: "/php-handy-properties/"
+permalink: pretty
 search_enabled: true
+
+# Aux links for the upper right navigation
+aux_links:
+  "PHP Handy Properties on GitHub":
+    - "//github.com/norse-blue/php-handy-properties"
+
+# Google Analytics
+ga_tracking: UA-144830285-1
