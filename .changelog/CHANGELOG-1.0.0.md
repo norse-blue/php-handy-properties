@@ -2,7 +2,7 @@
 
 First stable release.
 
-## Added
+## Added :sparkles:
 
 - Added the accessor and mutator functionality through traits `HasPropertyAccessor` and `HasPropertyMutator`.
 - Added the `HandyObject` class for usage with inheritance.
