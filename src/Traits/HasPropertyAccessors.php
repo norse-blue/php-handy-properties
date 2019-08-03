@@ -23,7 +23,9 @@ trait HasPropertyAccessors
      */
     final protected function hasAccessor(string $key, ?string &$accessor = null): bool
     {
-        return method_exists($this, $this->buildMethodName($key, 'accessor', $accessor));
+        $accessor = $this->buildMethodName($key, 'accessor');
+
+        return method_exists($this, $accessor);
     }
 
     /**

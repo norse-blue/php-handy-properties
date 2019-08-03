@@ -13,15 +13,13 @@ trait BuildsMethodName
      *
      * @param string $key
      * @param string $type
-     * @param string|null $name
      *
      * @return string
      */
-    final protected function buildMethodName(string $key, string $type, ?string &$name): string
+    final protected function buildMethodName(string $key, string $type): string
     {
         $studly_key = StringTransformer::studly($key);
-        $name = strtolower($type) . $studly_key;
 
-        return $name;
+        return strtolower($type) . $studly_key;
     }
 }
