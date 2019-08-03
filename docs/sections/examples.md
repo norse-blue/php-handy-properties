@@ -25,6 +25,8 @@ The following examples are equivalent, each having its caveats.
 
 declare(strict_type=1);
 
+namespace NorseBlue\HandyProperties\Examples;
+
 use NorseBlue\HandyProperties\HandyObject;
 
 /**
@@ -79,6 +81,8 @@ class Coordinate extends HandyObject
 <?php
 
 declare(strict_type=1);
+
+namespace NorseBlue\HandyProperties\Examples;
 
 use NorseBlue\HandyProperties\Traits\HasPropertyAccessors;
 use NorseBlue\HandyProperties\Traits\HasPropertyMutators;

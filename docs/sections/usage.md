@@ -20,7 +20,7 @@ There are different ways of using this package which will be outlined further do
 
 ## Using Inheritance
 
-The most simple way to use the package is by extending the HandyObject class:
+The most simple way to use the package is by extending the `HandyObject` class:
 
 ```php
 use NorseBlue\HandyProperties\HandyObject;
