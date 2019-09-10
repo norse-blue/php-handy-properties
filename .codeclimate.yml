@@ -54,6 +54,7 @@ exclude_patterns:
   - "docs/.sass-cache/**/*"
   - "docs/_site/**/*"
   - "docs/assets/**/*"
+  - "docs/favicon.ico"
   - "tests/**/*"
   - "vendor/**/*"
   # Files
