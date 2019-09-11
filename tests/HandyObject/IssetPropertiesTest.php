@@ -10,7 +10,7 @@ use NorseBlue\HandyProperties\Tests\TestCase;
 class IssetPropertiesTest extends TestCase
 {
     /** @test */
-    public function properties_can_be_checked_with_isset_when_accessible()
+    public function properties_can_be_checked_with_isset_when_accessible(): void
     {
         $subject = new HandySubjectAccessible();
 

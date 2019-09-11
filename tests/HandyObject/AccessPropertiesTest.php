@@ -14,7 +14,7 @@ use NorseBlue\HandyProperties\Tests\TestCase;
 class AccessPropertiesTest extends TestCase
 {
     /** @test */
-    public function properties_can_be_accessed_when_property_is_accessible_with_default_value()
+    public function properties_can_be_accessed_when_property_is_accessible_with_default_value(): void
     {
         $subject = new HandySubjectAccessible();
 
@@ -23,7 +23,7 @@ class AccessPropertiesTest extends TestCase
     }
 
     /** @test */
-    public function properties_can_be_accessed_when_property_is_accessible()
+    public function properties_can_be_accessed_when_property_is_accessible(): void
     {
         $subject = new HandySubjectAccessible(3);
 
@@ -32,7 +32,7 @@ class AccessPropertiesTest extends TestCase
     }
 
     /** @test */
-    public function properties_can_be_accessed_when_property_accessor_exist()
+    public function properties_can_be_accessed_when_property_accessor_exist(): void
     {
         $object = new HandySubjectAccessible();
 
@@ -51,7 +51,7 @@ class AccessPropertiesTest extends TestCase
     }
 
     /** @test */
-    public function properties_can_be_accessed_when_property_is_accessible_and_mutable()
+    public function properties_can_be_accessed_when_property_is_accessible_and_mutable(): void
     {
         $subject = new HandySubjectAccessibleAndMutable(3);
 
@@ -59,7 +59,7 @@ class AccessPropertiesTest extends TestCase
     }
 
     /** @test */
-    public function properties_cannot_be_accessed_when_property_is_not_accessible()
+    public function properties_cannot_be_accessed_when_property_is_not_accessible(): void
     {
         $subject = new HandySubjectMutable(3);
 

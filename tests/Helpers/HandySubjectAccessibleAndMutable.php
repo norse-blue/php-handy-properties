@@ -22,7 +22,7 @@ class HandySubjectAccessibleAndMutable extends HandyObject
     /**
      * @return int
      */
-    protected function accessorValue()
+    protected function accessorValue(): int
     {
         return $this->value;
     }
