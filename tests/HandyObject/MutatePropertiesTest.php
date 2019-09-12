@@ -15,7 +15,7 @@ use NorseBlue\HandyProperties\Tests\TestCase;
 class MutatePropertiesTest extends TestCase
 {
     /** @test */
-    public function properties_can_be_mutated_when_property_is_mutable()
+    public function properties_can_be_mutated_when_property_is_mutable(): void
     {
         $this->expectNotToPerformAssertions();
 
@@ -25,7 +25,7 @@ class MutatePropertiesTest extends TestCase
     }
 
     /** @test */
-    public function properties_can_be_mutated_when_mutator_does_not_return_any_value()
+    public function properties_can_be_mutated_when_mutator_does_not_return_any_value(): void
     {
         $this->expectNotToPerformAssertions();
 
@@ -35,7 +35,7 @@ class MutatePropertiesTest extends TestCase
     }
 
     /** @test */
-    public function properties_can_be_mutated_when_property_is_accessible_and_mutable()
+    public function properties_can_be_mutated_when_property_is_accessible_and_mutable(): void
     {
         $subject = new HandySubjectAccessibleAndMutable();
 
@@ -45,7 +45,7 @@ class MutatePropertiesTest extends TestCase
     }
 
     /** @test */
-    public function properties_cannot_be_mutated_when_property_is_not_mutable()
+    public function properties_cannot_be_mutated_when_property_is_not_mutable(): void
     {
         $subject = new HandySubjectAccessible();
 
