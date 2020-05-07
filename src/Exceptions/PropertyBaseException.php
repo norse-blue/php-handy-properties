@@ -13,15 +13,10 @@ use Throwable;
 abstract class PropertyBaseException extends RuntimeException
 {
     /** @var string The property that was not found. */
-    protected $property;
+    protected string $property;
 
     /**
      * Create a new instance.
-     *
-     * @param string $property
-     * @param string $message
-     * @param int $code
-     * @param \Throwable|null $previous
      */
     public function __construct(string $property = '', string $message = '', int $code = 0, ?Throwable $previous = null)
     {
@@ -32,8 +27,6 @@ abstract class PropertyBaseException extends RuntimeException
 
     /**
      * Get the property value.
-     *
-     * @return string
      */
     public function getProperty(): string
     {

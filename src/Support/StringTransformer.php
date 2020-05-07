@@ -8,10 +8,6 @@ final class StringTransformer
 {
     /**
      * Transform the given string into studly caps.
-     *
-     * @param string $value
-     *
-     * @return string
      */
     public static function studly(string $value): string
     {
