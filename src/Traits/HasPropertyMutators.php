@@ -14,24 +14,8 @@ trait HasPropertyMutators
     use BuildsMethodName;
 
     /**
-     * Checks if a mutator exists for the key.
-     *
-     * @param string $key
-     * @param string|null $mutator optional Output parameter to get the mutator name.
-     *
-     * @return bool
-     */
-    final protected function hasMutator(string $key, ?string &$mutator = null): bool
-    {
-        $mutator = $this->buildMethodName($key, 'mutator');
-
-        return method_exists($this, $mutator);
-    }
-
-    /**
      * Magic mutator.
      *
-     * @param string $key
      * @param mixed $value
      *
      * @return mixed
@@ -43,5 +27,17 @@ trait HasPropertyMutators
         }
 
         throw new PropertyNotMutableException($key, 'The property is not mutable.');
+    }
+
+    /**
+     * Checks if a mutator exists for the key.
+     *
+     * @param string|null $mutator optional Output parameter to get the mutator name.
+     */
+    final protected function hasMutator(string $key, ?string &$mutator = null): bool
+    {
+        $mutator = $this->buildMethodName($key, 'mutator');
+
+        return method_exists($this, $mutator);
     }
 }

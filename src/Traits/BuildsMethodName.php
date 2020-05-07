@@ -10,11 +10,6 @@ trait BuildsMethodName
 {
     /**
      * Builds the method name.
-     *
-     * @param string $key
-     * @param string $type
-     *
-     * @return string
      */
     final protected function buildMethodName(string $key, string $type): string
     {
