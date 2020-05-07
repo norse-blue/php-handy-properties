@@ -17,7 +17,7 @@
 ## Installation
 
 >Requirements:
->- [PHP 7.3+](https://php.net/releases)
+>- [PHP 7.4+](https://php.net/releases)
 
 Install this package using Composer:
 
