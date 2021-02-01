@@ -11,7 +11,7 @@ See the [changelog](.changelog/CHANGELOG-2.1.0.md) file of the current release f
 
 ## Unreleased
 
-All unreleased features and changes are tracked with the [unreleased](.changelog/UNRELEASED.md) changelog file.
+All unreleased features and changes are tracked with the [unreleased](.changelog/CHANGELOG-2.2.0.md) changelog file.
 
 ## All Releases
 

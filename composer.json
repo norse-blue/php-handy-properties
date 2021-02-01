@@ -1,7 +1,12 @@
 {
   "name": "norse-blue/handy-properties",
   "description": "PHP Handy Properties is a PHP library that scaffolds the use of properties through accessors and mutators.",
-  "keywords": ["handy", "properties", "accessors", "mutators"],
+  "keywords": [
+    "handy",
+    "properties",
+    "accessors",
+    "mutators"
+  ],
   "homepage": "https://norse.blue/open-source/php-handy-properties",
   "license": "MIT",
   "support": {
@@ -53,8 +58,11 @@
       "@test:coverage"
     ],
     "style:check": "phpcs",
-    "style:fix": "phpcbf",
+    "style:fix": "phpcbf || phpcs",
     "test": "phpunit --colors=always",
-    "test:coverage": "phpunit --colors=always --coverage-clover=./build/coverage.xml --coverage-html=./build/coverage"
+    "test:coverage": [
+      "@putenv XDEBUG_MODE=coverage",
+      "phpunit --colors=always --coverage-text --coverage-clover=./build/coverage.xml --coverage-html=./build/coverage"
+    ]
   }
 }

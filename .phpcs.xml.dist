@@ -3,8 +3,8 @@
     <description>PSR12 based custom ruleset</description>
 
     <!-- Config -->
-    <config name="ignore_errors_on_exit" value ="1" />
-    <config name="ignore_warnings_on_exit" value ="1" />
+    <config name="ignore_errors_on_exit" value="1" />
+    <config name="ignore_warnings_on_exit" value="1" />
 
     <!-- Arguments -->
     <!--<arg name="report" value="summary"/>-->

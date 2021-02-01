@@ -8,6 +8,7 @@ use Exception;
 use NorseBlue\HandyProperties\Exceptions\PropertyNotAccessibleException;
 use NorseBlue\HandyProperties\Tests\Helpers\HandySubjectAccessible;
 use NorseBlue\HandyProperties\Tests\Helpers\HandySubjectAccessibleAndMutable;
+use NorseBlue\HandyProperties\Tests\Helpers\HandySubjectCustomAccessibleAndMutable;
 use NorseBlue\HandyProperties\Tests\Helpers\HandySubjectMutable;
 use NorseBlue\HandyProperties\Tests\TestCase;
 
@@ -54,6 +55,14 @@ class AccessPropertiesTest extends TestCase
     public function properties_can_be_accessed_when_property_is_accessible_and_mutable(): void
     {
         $subject = new HandySubjectAccessibleAndMutable(3);
+
+        $this->assertEquals(3, $subject->value);
+    }
+
+    /** @test */
+    public function properties_can_be_accessed_with_custom_accessor_prefix_and_suffix(): void
+    {
+        $subject = new HandySubjectCustomAccessibleAndMutable(3);
 
         $this->assertEquals(3, $subject->value);
     }

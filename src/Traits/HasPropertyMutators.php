@@ -13,6 +13,9 @@ trait HasPropertyMutators
 {
     use BuildsMethodName;
 
+    protected string $handyPropertyMutatorPrefix = 'mutator';
+    protected string $handyPropertyMutatorSuffix = '';
+
     /**
      * Magic mutator.
      *
@@ -36,7 +39,7 @@ trait HasPropertyMutators
      */
     final protected function hasMutator(string $key, ?string &$mutator = null): bool
     {
-        $mutator = $this->buildMethodName($key, 'mutator');
+        $mutator = $this->buildMethodName($key, $this->handyPropertyMutatorPrefix, $this->handyPropertyMutatorSuffix);
 
         return method_exists($this, $mutator);
     }
