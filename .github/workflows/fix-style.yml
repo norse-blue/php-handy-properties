@@ -3,19 +3,30 @@ name: fix-style
 on: [push]
 
 jobs:
-  php-cs-fixer:
+  fix-style:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: [8.0]
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
 
-      - name: Run PHP CS Fixer
-        uses: docker://oskarstark/php-cs-fixer-ga
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
-          args: --config=.php_cs.dist --allow-risky=yes
+          php-version: ${{ matrix.php }}
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick
+
+      - name: Install dependencies
+        run: composer update --prefer-dist --no-interaction --no-suggest
+
+      - name: Check style
+        run: composer style:check
+
+      - name: Fix style
+        run: composer style:fix
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
