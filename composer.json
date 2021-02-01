@@ -58,7 +58,7 @@
       "@test:coverage"
     ],
     "style:check": "phpcs",
-    "style:fix": "phpcbf",
+    "style:fix": "phpcbf || phpcs",
     "test": "phpunit --colors=always",
     "test:coverage": [
       "@putenv XDEBUG_MODE=coverage",

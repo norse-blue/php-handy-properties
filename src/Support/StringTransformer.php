@@ -21,6 +21,4 @@ final class StringTransformer
     {
         return str_replace(' ', '', ucwords(str_replace(['-', '_'], ' ', $value)));
     }
-
-
 }
