@@ -22,12 +22,11 @@
     "optimize-autoloader": true
   },
   "require": {
-    "php": "^7.4"
+    "php": "^7.4|^8.0"
   },
   "require-dev": {
-    "nunomaduro/phpinsights": "^1.14",
     "phpstan/phpstan": "^0.12",
-    "phpunit/phpunit": "^9.1",
+    "phpunit/phpunit": "^9.5",
     "squizlabs/php_codesniffer": "^3.5"
   },
   "autoload": {
@@ -41,24 +40,21 @@
     }
   },
   "scripts": {
-    "analyse": "vendor/bin/phpstan analyse --ansi",
+    "analyze": "phpstan analyze --ansi",
+    "analyze:github": "phpstan analyze --error-format=github",
     "check": [
       "@style:check",
-      "@analyse",
-      "@insights",
+      "@analyze",
       "@test"
     ],
     "check:coverage": [
       "@style:check",
-      "@analyse",
-      "@insights",
+      "@analyze",
       "@test:coverage"
     ],
-    "insights": "vendor/bin/phpinsights --no-interaction --ansi",
-    "insights:verbose": "vendor/bin/phpinsights --no-interaction --ansi --verbose",
-    "style:check": "vendor/bin/phpcs",
-    "style:fix": "vendor/bin/phpcbf",
-    "test": "vendor/bin/phpunit --colors=always",
-    "test:coverage": "vendor/bin/phpunit --colors=always --coverage-clover=./build/coverage.xml --coverage-html=./build/coverage"
+    "style:check": "phpcs",
+    "style:fix": "phpcbf",
+    "test": "phpunit --colors=always",
+    "test:coverage": "phpunit --colors=always --coverage-clover=./build/coverage.xml --coverage-html=./build/coverage"
   }
 }
