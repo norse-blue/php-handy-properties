@@ -8,6 +8,7 @@ use Exception;
 use NorseBlue\HandyProperties\Exceptions\PropertyNotMutableException;
 use NorseBlue\HandyProperties\Tests\Helpers\HandySubjectAccessible;
 use NorseBlue\HandyProperties\Tests\Helpers\HandySubjectAccessibleAndMutable;
+use NorseBlue\HandyProperties\Tests\Helpers\HandySubjectCustomAccessibleAndMutable;
 use NorseBlue\HandyProperties\Tests\Helpers\HandySubjectMutable;
 use NorseBlue\HandyProperties\Tests\Helpers\HandySubjectMutableVoid;
 use NorseBlue\HandyProperties\Tests\TestCase;
@@ -38,6 +39,16 @@ class MutatePropertiesTest extends TestCase
     public function properties_can_be_mutated_when_property_is_accessible_and_mutable(): void
     {
         $subject = new HandySubjectAccessibleAndMutable();
+
+        $subject->value = 3;
+
+        $this->assertEquals(3, $subject->value);
+    }
+
+    /** @test */
+    public function properties_can_be_mutated_with_custom_mutator_prefix_and_suffix(): void
+    {
+        $subject = new HandySubjectCustomAccessibleAndMutable();
 
         $subject->value = 3;
 

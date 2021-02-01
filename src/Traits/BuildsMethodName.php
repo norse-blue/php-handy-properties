@@ -11,10 +11,8 @@ trait BuildsMethodName
     /**
      * Builds the method name.
      */
-    final protected function buildMethodName(string $key, string $type): string
+    final protected function buildMethodName(string $key, string $prefix, string $suffix = ''): string
     {
-        $studly_key = StringTransformer::studly($key);
-
-        return strtolower($type) . $studly_key;
+        return StringTransformer::camel(StringTransformer::studly($prefix) . StringTransformer::studly($key) . StringTransformer::studly($suffix));
     }
 }

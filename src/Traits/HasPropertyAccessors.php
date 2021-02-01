@@ -13,6 +13,9 @@ trait HasPropertyAccessors
 {
     use BuildsMethodName;
 
+    protected string $handyPropertyAccessorPrefix = 'accessor';
+    protected string $handyPropertyAccessorSuffix = '';
+
     /**
      * Magic accessor.
      *
@@ -44,7 +47,7 @@ trait HasPropertyAccessors
      */
     final protected function hasAccessor(string $key, ?string &$accessor = null): bool
     {
-        $accessor = $this->buildMethodName($key, 'accessor');
+        $accessor = $this->buildMethodName($key, $this->handyPropertyAccessorPrefix, $this->handyPropertyAccessorSuffix);
 
         return method_exists($this, $accessor);
     }
