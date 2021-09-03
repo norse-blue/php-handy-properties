@@ -19,10 +19,9 @@ trait HasPropertyAccessors
     /**
      * Magic accessor.
      *
-     * @return mixed
      * @noinspection MagicMethodsValidityInspection
      */
-    public function __get(string $key)
+    public function __get(string $key): mixed
     {
         if ($this->hasAccessor($key, $accessor)) {
             return $this->$accessor();
@@ -33,6 +32,7 @@ trait HasPropertyAccessors
 
     /**
      * Magic variable set check.
+     *
      * @noinspection MagicMethodsValidityInspection
      */
     public function __isset(string $key): bool
