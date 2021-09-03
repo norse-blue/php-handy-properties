@@ -6,6 +6,9 @@ namespace NorseBlue\HandyProperties\Traits;
 
 use NorseBlue\HandyProperties\Support\StringTransformer;
 
+/**
+ * @internal
+ */
 trait BuildsMethodName
 {
     /**

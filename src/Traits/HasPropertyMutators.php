@@ -19,14 +19,13 @@ trait HasPropertyMutators
     /**
      * Magic mutator.
      *
-     * @param mixed $value
-     *
-     * @return mixed
+     * @noinspection MagicMethodsValidityInspection
      */
-    public function __set(string $key, $value)
+    public function __set(string $key, mixed $value): void
     {
         if ($this->hasMutator($key, $mutator)) {
-            return $this->$mutator($value);
+            $this->$mutator($value);
+            return;
         }
 
         throw new PropertyNotMutableException($key, 'The property is not mutable.');

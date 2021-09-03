@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace NorseBlue\HandyProperties\Support;
 
+/**
+ * @internal
+ */
 final class StringTransformer
 {
     /**

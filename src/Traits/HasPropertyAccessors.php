@@ -20,6 +20,7 @@ trait HasPropertyAccessors
      * Magic accessor.
      *
      * @return mixed
+     * @noinspection MagicMethodsValidityInspection
      */
     public function __get(string $key)
     {
@@ -32,6 +33,7 @@ trait HasPropertyAccessors
 
     /**
      * Magic variable set check.
+     * @noinspection MagicMethodsValidityInspection
      */
     public function __isset(string $key): bool
     {
