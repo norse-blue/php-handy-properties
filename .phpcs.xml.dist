@@ -14,7 +14,9 @@
     <arg value="sp" />
 
     <!-- Base ruleset -->
-    <rule ref="PSR12" />
+    <rule ref="PSR12">
+        <exclude name="Generic.Files.LineLength.TooLong" />
+    </rule>
     <rule ref="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">
         <exclude-pattern>./tests/*</exclude-pattern>
     </rule>
