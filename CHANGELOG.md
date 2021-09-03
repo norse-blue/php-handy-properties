@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Current Release
 
-See the [changelog](.changelog/CHANGELOG-3.0.0.md) file of the current release for the latest changes.
+See the [changelog](.changelog/CHANGELOG-3.1.0.md) file of the current release for the latest changes.
 
 ## Unreleased
 
@@ -15,6 +15,7 @@ All unreleased features and changes are tracked with the [unreleased](.changelog
 
 ## All Releases
 
+- [[3.1.0](.changelog/CHANGELOG-3.1.0.md)] released on 2021-09-03
 - [[3.0.0](.changelog/CHANGELOG-3.0.0.md)] released on 2021-09-02
 - [[2.2.0](.changelog/CHANGELOG-2.2.0.md)] released on 2021-02-01
 - [[2.1.0](.changelog/CHANGELOG-2.1.0.md)] released on 2021-02-01
